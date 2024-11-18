@@ -6,3 +6,13 @@ Funcionalidades
 * Ver Contactos: Muestra todos los contactos almacenados.
 * Eliminar Contactos: Elimina un contacto de la lista especificando su número de índice.
 * Salir: Cierra el programa
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version 1.00
+*Opcion para crear contacto implementada
+*Opcion para ver lista de contactos implementada
+*Opcion para borrar contactos implementada
+*Opcion para salir del programa implementada
