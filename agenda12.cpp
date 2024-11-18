@@ -23,11 +23,11 @@ int main() {
 		cout << "2. Ver Contactos\n";
 		cout << "3. Eliminar Contactos\n";
 		cout << "0. Salir\n";
-		cout << "Opción: ";
+		cout << "OpciÃ³n: ";
 		cin >> opcion;
 		cin.ignore();
 		if (opcion == 0) {
-			cout << "¡Adiós!\n";
+			cout << "Â¡AdiÃ³s!\n";
 			break;
 		}
 
@@ -37,14 +37,14 @@ int main() {
 			if (cuenta < limite) {
 				cout << "\nNombre: ";
 				getline(cin, lista[cuenta].nombre);
-				cout << "Número: ";
+				cout << "NÃºmero: ";
 				getline(cin, lista[cuenta].telefono);
 				cuenta++;
-				cout << "¡Contacto agregado!\n\n";
+				cout << "Â¡Contacto agregado!\n\n";
 
 			}
 			else {
-				cout << "\nLa lista de contactos está llena.\n\n";
+				cout << "\nLa lista de contactos estÃ¡ llena.\n\n";
 			}
 			break;//jean L Padilla Rivera
 		case 2:
@@ -52,16 +52,16 @@ int main() {
 				cout << "\nNo hay contactos para mostrar.\n\n";
 			}
 			else {
-				// Ordenar los contactos alfabéticamente por nombre
-				sort(lista, lista + cuenta, [](const Contacto a, const Contacto b) {    //[jvilella] ([2020]) [C++ Ordenación con sort.] Recuperado desde: [https://aprende.olimpiada-informatica.org/cpp-sort.]
+				// Ordenar los contactos alfabÃ©ticamente por nombre
+				sort(lista, lista + cuenta, [](const Contacto a, const Contacto b) {    //[jvilella] ([2020]) [C++ OrdenaciÃ³n con sort.] Recuperado desde: [https://aprende.olimpiada-informatica.org/cpp-sort.]
 
-					.
+					
 						return a.nombre < b.nombre;
 
 
 					});
 				cout << "\nLista de Contactos:\n";
-				cout << left << setw(20) << "Nombre" << "Teléfono" << endl;
+				cout << left << setw(20) << "Nombre" << "TelÃ©fono" << endl;
 				for (int i = 0; i < cuenta; i++) {
 					cout << left << setw(20) << lista[i].nombre << lista[i].telefono << "\n";
 				}
@@ -78,22 +78,22 @@ int main() {
 					cout << i + 1 << ". " << lista[i].nombre << " -" << lista[i].telefono << "\n";
 				}
 				int borrar;
-				cout << "\nIngrese el número del contacto a eliminar: ";
+				cout << "\nIngrese el nÃºmero del contacto a eliminar: ";
 				cin >> borrar;
 				if (borrar >= 1 or borrar <= cuenta) {
 					for (int i = borrar - 1; i < cuenta - 1; i++) {
 						lista[i] = lista[i + 1];
 					}
 					cuenta--;
-					cout << "\n¡Contacto eliminado!\n\n";
+					cout << "\nÂ¡Contacto eliminado!\n\n";
 				}
 				else {
-					cout << "\nNúmero inválido.\n\n";
+					cout << "\nNÃºmero invÃ¡lido.\n\n";
 				}
 			}
 			break;
 		default:
-			cout << "\nOpción inválida.\n\n";
+			cout << "\nOpciÃ³n invÃ¡lida.\n\n";
 		}
 	}
 	return 0;
